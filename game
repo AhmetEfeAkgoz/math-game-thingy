@@ -1,0 +1,19 @@
+import random
+print("yazılı teste hoşgeldiniz")
+print("soruları cevaplayın")
+playing = input("oynamak istiyor musunuz? (evet/hayır) ")
+if playing.lower() != "evet":
+    quit()
+print("başlayalım")
+score = 0
+question = 1
+while question <= 10:
+    num1 = random.randint(1, 9999)
+    num2 = random.randint(1, 9999)
+    answer = int(input(f"{question}. {num1} + {num2} = "))
+    if answer == num1 + num2:
+        print("doğru")
+        score += 1
+    else:
+        print("yanlış")
+    question += 1
